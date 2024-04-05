@@ -4,38 +4,44 @@ using UnityEngine;
 
 public class DirectionalNode : MonoBehaviour
 {
-    public Sprite none;
-    public Sprite left;
-    public Sprite right;
-    public string current;
-    SpriteRenderer sr;
+     public Sprite none;
+     public Sprite left;
+     public Sprite right;
+     public string current;
+     SpriteRenderer sr;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        sr = GetComponent<SpriteRenderer>();
-        SwitchSprite();
-    }
+     // Start is called before the first frame update
+     void Start()
+     {
+          sr = GetComponent<SpriteRenderer>();
+          sr.sprite = left;
+          SwitchSprite();
+     }
 
-    // Update is called once per frame
-    void Update()
-    {
+     // Update is called once per frame
+     void Update()
+     {
         
-    }
+     }
+     
+     void SwitchSprite()
+     {
+          Debug.Log("Switch Sprite Ran");
+          if (current == "left")
+          {
+               sr.sprite = left;
+               Debug.Log("Choose Left");
 
-    void SwitchSprite()
-    {
-        if(current == "left")
-        {
-            sr.sprite = left;
-        }
-        else if(current == "right")
-        {
-            sr.sprite = right;
-        }
-        else
-        {
-            sr.sprite = none;
-        }
-    }
+          }
+          else if (current == "right")
+          {
+               sr.sprite = right;
+               Debug.Log("Choose Right");
+          }
+          else
+          {
+               sr.sprite = none;
+               Debug.Log("Choose None");
+          }
+     }
 }
