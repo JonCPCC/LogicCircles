@@ -26,22 +26,22 @@ public class DirectionalNode : MonoBehaviour
      
      void SwitchSprite()
      {
-          Debug.Log("Switch Sprite Ran");
+          //Debug.Log("Switch Sprite Ran");
           if (current == "left")
           {
                sr.sprite = left;
-               Debug.Log("Choose Left");
+               //Debug.Log("Choose Left");
 
           }
           else if (current == "right")
           {
                sr.sprite = right;
-               Debug.Log("Choose Right");
+               //Debug.Log("Choose Right");
           }
           else
           {
                sr.sprite = none;
-               Debug.Log("Choose None");
+               //Debug.Log("Choose None");
           }
      }
 }
